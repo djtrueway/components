@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Card / MasterCard</title>
+    <style>
+        .mastercard{
+            background-color: rgb(4, 88, 243);
+            color: rgb(255, 255, 255);
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            background-image: none;
+            overflow: hidden;
+            position: relative;
+            box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+            border-radius: 16px;
+            z-index: 0;
+            margin-bottom: 24px;
+        }
+        .text-balance.css-1q2dsuj {
+            margin: 0px 0px 16px;
+            font-weight: 600;
+            line-height: 1.57143;
+            font-size: 0.875rem;
+            font-family: "Public Sans", sans-serif;
+            opacity: 0.72;
+        }
+        .text-number-card.css-v61v4p {
+            margin: 0px;
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 1rem;
+            font-family: "Public Sans", sans-serif;
+            text-align: right;
+        }
+        .label {
+            font-size: 11px;
+            letter-spacing: 1px;
+            opacity: 0.5;
+            line-height: 1em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 500;
+        }
+        .title {
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            margin-top: 7px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 col-12 mx-auto mastercard py-4">
+                <div class="row">
+                    <img 
+                    src="https://app.krezypay.com/assets/img/logo.png" 
+                    alt=""
+                    class="col-4 mb-3 mt-2"
+                    >
+                    <div class="col-8"><span class="float-end title px-5" style="cursor: pointer;">. . .</span></div>
+                </div>
+                <div class="row px-5 mb-3 mt-3">
+                    <h3 class="col-9 title"><span class="label">Balance</span>$1256,90</h3>
+                </div>
+                <div class="row px-5  mt-3 mb-3">
+                    <h3 class="col-12 title"><span class="label">Card number</span>....9905</h3>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row mt-4">
+                            <h3 class="col-4 title"><span class="label">Expiry</span>12/25</h3>
+                            <h3 class="col-3 title"><span class="lead label">CCV</span>553</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img 
+                        class="col-6 float-end"
+                        src="https://minimals.cc/assets/icons/payments/ic_mastercard.svg"
+                        alt=""
+                    >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
