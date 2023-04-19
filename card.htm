@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous" -->
     <title>Card / MasterCard</title>
     <style>
+        .primary{
+            color:  #0d6efd;
+        }
+        a {
+            color: #6236FF;
+            outline: 0 !important;
+            text-decoration: none;
+        }
+        .container{
+            display: inline-block;
+            padding-left: 25%;
+            padding-right: 25%;
+            margin-top: 1%;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-top: 2%;
+        }
+        .float-end{
+            justify-content:space-between;
+        }
+        .space{
+            justify-content: space-around;
+        }
         .mastercard{
             background-color: rgb(4, 88, 243);
             color: rgb(255, 255, 255);
@@ -18,6 +44,7 @@
             border-radius: 16px;
             z-index: 0;
             margin-bottom: 24px;
+            padding: 32px;
         }
         .text-balance.css-1q2dsuj {
             margin: 0px 0px 16px;
@@ -51,19 +78,43 @@
             margin-top: 7px;
             font-size: 24px;
         }
+        .logo {
+            flex: 0 0 auto;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: auto;
+            width: 33.33333333%;
+        }
+
+        /* On screens that are 992px or less, set the background color to blue */
+        @media screen and (max-width: 992px) {
+            .container{
+            display: inline-block;
+            padding-left: 0%;
+            padding-right: 0%;
+            margin-top: 1%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .container{
+            display: inline-block;
+            padding-left: 0%;
+            padding-right: 0%;
+            margin-top: 1%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 col-12 mx-auto mastercard py-4">
-                <div class="row">
+            <div class="mastercard">
+                <div class="row float-end">
                     <img 
                     src="https://app.krezypay.com/assets/img/logo.png" 
                     alt=""
-                    class="col-4 mb-3 mt-2"
+                    class="logo"
                     >
-                    <div class="col-8"><span class="float-end title px-5" style="cursor: pointer;">. . .</span></div>
+                    <div class=""><span class="title " style="cursor: pointer;">. . .</span></div>
                 </div>
                 <div class="row  mb-3 mt-3">
                     <h3 class="col-9 title"><span class="label">Balance</span>$1256,90</h3>
@@ -71,23 +122,23 @@
                 <div class="row mt-3 mb-3">
                     <h3 class="col-12 title"><span class="label">Card number</span>....9905</h3>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="row mt-4">
-                            <h3 class="col-4 title"><span class="label">Expiry</span>12/25</h3>
-                            <h3 class="col-3 title"><span class="lead label">CCV</span>553</h3>
-                        </div>
+                <div class="row float-end">
+                    
+                    <div class="row space">
+                        <div style="width:80px"><h3 class="col-4 title"><span class="label">Expiry</span>12/25</h3></div> 
+                        <div style="width:80px" ><h3 class="col-3 title"><span class="lead label">CCV</span>553</h3></div> 
                     </div>
+               
                     <div class="col-6">
                         <img 
-                        class="col-6 float-end"
-                        src="https://minimals.cc/assets/icons/payments/ic_mastercard.svg"
-                        alt=""
-                    >
+                            style="width: 120px; height: 100%;"
+                            src="https://minimals.cc/assets/icons/payments/ic_mastercard.svg"
+                            alt=""
+                        >
                     </div>
                 </div>
             </div>
-        </div>
+
     </div>
     
 </body>
