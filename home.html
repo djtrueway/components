@@ -79,7 +79,94 @@
         .btn:hover{
           box-shadow:  0 1rem 3rem #aaa;
         }
+
+        .box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+  /** css for transiction **/
+  .reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
     </style>
+    <script defer >
+      function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+    </script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bgColor">
@@ -122,10 +209,10 @@
 
       <hr class="m-0">
 
-      <section class="bgColor bg-img">
+      <section  class="bgColor bg-img">
         <div class="container py-5">
             <div class="row">
-                <div class="col-md-5 col-12 " style="margin-top: 7%;">
+                <div class="col-md-5 col-12 reveal fade-left " style="margin-top: 7%;">
                     <h1 class="text-light title">Your go-to source to manage payment</h1>
                     <h1 class="my-4 style-gradient">With Complete Ease.</h1>
                     <p class="my-4 text-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis magni assumenda sunt nulla facilis nesciunt.</p>
@@ -139,7 +226,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="col-md-7 col-12">
+                <div class="col-md-7 col-12  reveal fade-right">
                   <img src="./img/new/krezypaywebArtboard-1_045320.png" width="100%" class="px-5" />
                 </div>
             </div>
@@ -150,7 +237,7 @@
         <div class="container-fluid py-5" style="background-color: #0e0d1f;">
           <div class="container">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 reveal fade-left">
                 <div class="row">
                   <div class="col-1">
                     <i class="fa fa-star starColor" aria-hidden="true"></i>
@@ -170,7 +257,7 @@
                   <p class="color-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. soluta tempore commodi eveniet minus!</p>
                 </div>
               </div>
-              <div class="col-md-8">
+              <div class="col-md-8 reveal fade-right">
                   <div class="col-12">
                     <h5 class="text-light">Feaured In:</h5>
                   </div>
@@ -190,7 +277,7 @@
           <div class="row">
             <div class="col-md-5 mx-auto">
               <div class="row">
-                <div class="col-12">
+                <div class="col-12 reveal fade-left">
                   <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nulla.</h1>
                   <p class="my-4 color-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium delectus odio eos voluptate labore amet et voluptates dolorum mollitia impedit animi omnis, illum voluptas alias!</p>
                   <p>We believe that everyone should have access to financial services regardless of their background. That’s why we</p>
@@ -212,7 +299,7 @@
               </div>
 
             </div>
-            <div class="col-md-5 col-10 mx-auto">
+            <div class="col-md-5 col-10 mx-auto reveal fade-bottom">
               <div>
                 <img  src="./img/new/webPhoneArtboard-1_014411.png" width="50%"  class="rounded " alt="">
               </div>
@@ -263,13 +350,13 @@
                     </div>
                   </div>
                   <div class="col-md-4 col-12">
-                      <img src="./img/new/webCard2Artboard-1_014500.png" width="100%" alt="">
+                      <img class="box" src="./img/new/webCard2Artboard-1_014500.png" width="100%" alt="">
                   </div>
                 </div>
 
               </div>
               <div class="col-md-6 col-12">
-                <img src="./img/new/webCard3Artboard-1_014346.png" class="" width="100%" alt="">
+                <img  src="./img/new/webCard3Artboard-1_014346.png" class="box" width="100%" alt="">
               </div>
 
             </div>
