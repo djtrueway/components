@@ -97,12 +97,31 @@
 
 
   /** css for transiction **/
-  .reveal {
+.reveal {
   position: relative;
   opacity: 0;
 }
 
 .reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+
+.after {
+  position: relative;
+  opacity: 0;
+}
+
+.after.active {
   opacity: 1;
 }
 .active.fade-bottom {
@@ -148,8 +167,29 @@
 
 
     </style>
-    <script defer >
-      function reveal() {
+<script defer >
+  function after() {
+  var reveals = document.querySelectorAll(".after");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+// DOMContentLoaded
+window.addEventListener("DOMContentLoaded", after);
+</script>
+
+
+<script defer >
+  function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
   for (var i = 0; i < reveals.length; i++) {
@@ -164,7 +204,7 @@
     }
   }
 }
-
+// DOMContentLoaded
 window.addEventListener("scroll", reveal);
     </script>
 </head>
@@ -212,7 +252,7 @@ window.addEventListener("scroll", reveal);
       <section  class="bgColor bg-img">
         <div class="container py-5">
             <div class="row">
-                <div class="col-md-5 col-12 reveal fade-left " style="margin-top: 7%;">
+                <div class="col-md-5 col-12 after fade-left " style="margin-top: 7%;">
                     <h1 class="text-light title">Your go-to source to manage payment</h1>
                     <h1 class="my-4 style-gradient">With Complete Ease.</h1>
                     <p class="my-4 text-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis magni assumenda sunt nulla facilis nesciunt.</p>
@@ -226,7 +266,7 @@ window.addEventListener("scroll", reveal);
                       </div>
                     </div>
                 </div>
-                <div class="col-md-7 col-12  reveal fade-right">
+                <div class="col-md-7 col-12  after fade-right">
                   <img src="./img/new/krezypaywebArtboard-1_045320.png" width="100%" class="px-5" />
                 </div>
             </div>
@@ -397,7 +437,7 @@ window.addEventListener("scroll", reveal);
                 </div>
               </div>
               <div class="col-md-4">
-                <img height="512" src="https://advanture.icu/bden/wp-content/uploads/sites/18/2023/04/MobileApp03-562x1024.png" alt="">
+                <img height="512" class="reveal fade-bottom" src="https://advanture.icu/bden/wp-content/uploads/sites/18/2023/04/MobileApp03-562x1024.png" alt="">
               </div>
               <div class="col-md-4 my-5">
                 <div class="row my-5">
@@ -450,7 +490,7 @@ window.addEventListener("scroll", reveal);
             </div>
 
             <div class="col-md-4 col-6 my-5">
-              <div class="card p-3" style="background-color: #0e0d1f;">
+              <div class="card p-3 reveal fade-bottom" style="background-color: #0e0d1f;">
                 <div class="card-title">
                   <i class="fa fa-credit-card-alt fa-3x rounded-circle my-3" aria-hidden="true"></i>
                   <h3>Payment Methods</h3>
@@ -461,7 +501,7 @@ window.addEventListener("scroll", reveal);
             </div>
 
             <div class="col-md-4 col-6 my-5">
-              <div class="card p-3" style="background-color: #0e0d1f;">
+              <div class="card p-3 reveal fade-bottom" style="background-color: #0e0d1f;">
                 <div class="card-title">
                   <i class="fa fa-credit-card-alt fa-3x rounded-circle my-3" aria-hidden="true"></i>
                   <h3>Developer's API</h3>
@@ -472,7 +512,7 @@ window.addEventListener("scroll", reveal);
             </div>
 
             <div class="col-md-4 col-6 my-5">
-              <div class="card p-3" style="background-color: #0e0d1f;">
+              <div class="card p-3 reveal fade-bottom" style="background-color: #0e0d1f;">
                 <div class="card-title">
                   <i class="fa fa-google-wallet fa-3x rounded-circle my-3" aria-hidden="true"></i>
                   <h3>E-Wallet</h3>
@@ -483,7 +523,7 @@ window.addEventListener("scroll", reveal);
             </div>
 
             <div class="col-md-4 col-6 my-5">
-              <div class="card p-3" style="background-color: #0e0d1f;">
+              <div class="card p-3 reveal fade-bottom" style="background-color: #0e0d1f;">
                 <div class="card-title">
                   <i class="fa fa-credit-card-alt fa-3x rounded-circle my-3" aria-hidden="true"></i>
                   <h3>Payment Methods</h3>
@@ -494,7 +534,7 @@ window.addEventListener("scroll", reveal);
             </div>
 
             <div class="col-md-4 col-6 my-5">
-              <div class="card p-3" style="background-color: #0e0d1f;">
+              <div class="card p-3 reveal fade-bottom" style="background-color: #0e0d1f;">
                 <div class="card-title">
                   <i class="fa fa-credit-card-alt fa-3x rounded-circle my-3" aria-hidden="true"></i>
                   <h3>Developer's API</h3>
@@ -505,7 +545,7 @@ window.addEventListener("scroll", reveal);
             </div>
 
             <div class="col-md-4 col-6 my-5">
-              <div class="card p-3" style="background-color: #0e0d1f;">
+              <div class="card p-3 reveal fade-bottom" style="background-color: #0e0d1f;">
                 <div class="card-title">
                   <i class="fa fa-google-wallet fa-3x rounded-circle my-3" aria-hidden="true"></i>
                   <h3>E-Wallet</h3>
