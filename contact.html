@@ -79,7 +79,97 @@
           box-shadow:  0 1rem 3rem #aaa;
         }
 
-    </style>
+
+          /** css for transiction **/
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+          /** css for transiction **/
+          .reveal {
+  position: relative;
+  opacity: 0;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+
+  </style>
+  <script defer >
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    // DOMContentLoaded
+    window.addEventListener("scroll", reveal);
+  </script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bgColor">
@@ -227,9 +317,9 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-12 rounded bg-footer">
-                <div class="row m-5">
-                  <div class="col-md-1 col-5">
+              <div class="col-12 rounded reveal fade-right  bg-footer">
+                <div class="row m-5 ">
+                  <div class="col-md-1  col-5">
                     <div class="rounded-circle px-4 py-4 text-center" style="background-color:#5f5883 !important;"><i class="fa  fa-2x fa-envelope-o " aria-hidden="true"></i></div>
                   </div>
                   <div class="col-md-7">
@@ -249,7 +339,7 @@
               </div>
 
               <div class="row">
-                <div class="col-md-4 col-12 rounded mt-5 p-3 " style="background-color:#463e7046 !important;">
+                <div class="col-md-4 col-12 rounded reveal fade-bottom mt-5 p-3 " style="background-color:#463e7046 !important;">
                   <h3>KrezyPay</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatem velit nemo voluptate nam aliquid.</p>
                   <div>
@@ -259,7 +349,7 @@
                 </div>
                 <div class="col-md-4 col-12 mt-5">
                   <div class="row">
-                    <div class="col-6 mx-auto">
+                    <div class="col-6 mx-auto reveal fade-bottom">
                       <h4>Quick Links</h4>
                   <ul style="list-style-type: none" class="p-0">
                     <li class="color-text"> <i class="fa fa-angle-right my-2 mx-2" aria-hidden="true"></i> Payment Integration</li>
@@ -271,7 +361,7 @@
                     </div>
                   </div> 
                 </div>
-                <div class="col-md-4 col-6 mt-5">
+                <div class="col-md-4 col-6 mt-5 reveal fade-bottom">
                   <h4>Company</h4>
                   <ul style="list-style-type: none" class="p-0">
                     <li class=""> <i class="fa fa-phone p-2 my-2 mx-2 rounded-circle bg-light text-dark" aria-hidden="true"></i> Phone Number <br> <span class="color-text">+50936685393</span></li>
