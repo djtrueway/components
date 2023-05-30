@@ -34,6 +34,10 @@
             color: #7c45e1;
         }
 
+        .text-light:hover{
+          color: #7c45e1 !important;
+        }
+
 
         .body{
             color: #7c45e1 !important;
@@ -149,6 +153,16 @@
   animation: fade-right 1s ease-in;
 }
 
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #7c45e1;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+}
+
 
   </style>
   <script defer >
@@ -178,7 +192,7 @@
         <img src="https://app.krezypay.com/assets/img/logo.png" height="64px" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon color"></span>
+        <span ><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-0 mb-lg-0">
@@ -224,7 +238,7 @@
       </section>
       <div class="container py-5">
         <div class="row my-5">
-          <div class="col-6">
+          <div class="col-md-6 col-12">
             <h3>Contact Information</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corporis facere eveniet adipisci, natus possimus!</p>
 
@@ -259,7 +273,7 @@
             </div>
 
           </div>
-          <div class="col-6 p-5 rounded" style="background-color: #f4f6ff !important;">
+          <div class="col-md-6 col-12 mt-3 p-5 rounded" style="background-color: #f4f6ff !important;">
             <h3>Send Us Your Query Here</h3>
             <p>Let us know how to get back to you</p>
             <hr>
