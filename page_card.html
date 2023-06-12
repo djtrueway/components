@@ -24,32 +24,60 @@
         .border-right{
             border-right: 1px solid #fff !important;
         }
+        .background{
+            background-color: #eee;
+        }
     </style>
     <script src="./js/cardCheck.js" defer ></script>
 </head>
 <body>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-6 mx-auto paper">
-                <div class="row">
-                    <div class="col-4 mb-3 mx-auto">
-                        <img src="https://kamahi.org/wp-content/uploads/2018/09/visa-and-mastercard-logos-logo-visa-png-logo-visa-mastercard-png-visa-logo-white-png-awesome-logos.png" width="150px" height="50px" alt="">
+            <div class="col-md-6 col-12 mx-auto paper">
+                <div class="row p-0 m-0">
+                    <div class="col-12 pt-5 rounded mb-5  m-0 background">
+
+                        <div class="col-7 col-md-4 mb-3 mx-auto">
+                            <img src="https://kamahi.org/wp-content/uploads/2018/09/visa-and-mastercard-logos-logo-visa-png-logo-visa-mastercard-png-visa-logo-white-png-awesome-logos.png" width="150px" height="50px" alt="">
+                        </div>
+                        <h4 class="text-muted col-12 mt-3 mb-3" style="text-align: center;" >Achat a KrezyPay</h4>
+    
+                        <div class="row col-12">
+                            <div class="col-md-12 col-12 mx-auto mb-5">
+                                <h3 style="text-align: center;">84,00 $ US</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="col-12">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control form-control-lg" placeholder="exemple@gmail.com">
                     </div>
                     <div class="input-group col-12 mt-4">
                         <input id="card_input" type="text" onchange="selectCardType()" onkeyup="selectCardType()" onkeydown="selectCardType()"  class="form-control border-right  form-control-lg" maxlength="19" placeholder="1234 1234 1234 1234">
                         <span class="input-group-text bg-light" id="img_card"><img width="56px" height="32px" src="https://paymentweek.com/wp-content/uploads/2018/06/Visa-MasterCard-in-Iran-.jpg" alt=""></span>
                       </div>
-                    <div class="col-12">
+                    <div class="col-12 mt-3">
                         <label for="exampleInputEmail1">Name on card</label>
                         <input type="email" class="form-control form-control-lg" placeholder="Ex Peterson Saint aime">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 mt-3">
                         <label for="exampleInputEmail1">Expiry date</label>
                         <input type="month" class="form-control form-control-lg" placeholder="01/19">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 mt-3">
                         <label for="exampleInputEmail1">Security code</label>
                         <input type="email" class="form-control form-control-lg" maxlength="3" placeholder="...">
+                    </div>
+                    <div class="col-12 mt-4">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                Enregistrer mes informations en toute sécurité pour le paiement en un clic
+                            </label>
+                        </div>
                     </div>
                     <div class="col-12 mt-4">
                         <button class="btn btn-primary btn-block btn-lg" >Pay</button>

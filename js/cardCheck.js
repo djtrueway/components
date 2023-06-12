@@ -106,11 +106,18 @@ function selectCardType() {
 
         console.log(validateCardNumber(cardNumValue));
         document.getElementById("card_input").value = format(cardNumValue);
-      // document.getElementById("mc").checked = "checked";
+
     } else if (discover.test(cardNumValue)) {
+
+        // add logo on input
+        const img_input = document.getElementById("img_card")
+        img_input.removeChild(img_input.firstElementChild);
+        img.src = "https://www.pngitem.com/pimgs/m/257-2572317_discover-card-hd-png-download.png";
+        img.width = 56
+        img.height = 32
+        img_input.appendChild(img);
         console.log(validateCardNumber(cardNumValue));
         document.getElementById("card_input").value = format(cardNumValue);
-        alert("discover");
       // document.getElementById("discover").checked = "checked";
     } else if (amex.test(cardNumValue)) {
         console.log(validateCardNumber(cardNumValue));
