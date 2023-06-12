@@ -86,8 +86,7 @@ function selectCardType() {
         // add logo on input 
         const img_input = document.getElementById("img_card")
         img_input.removeChild(img_input.firstElementChild);
-        img.src = "https://w7.pngwing.com/pngs/648/10/png-transparent-visa-logo-credit-card-visa-debit-card-payment-card-mastercard-visa-blue-text-trademark.png"
-        img.width = 52
+        img.src = "./img/visa.png";
         img.height = 32
         img_input.appendChild(img);
 
@@ -99,8 +98,7 @@ function selectCardType() {
         // add logo on input
         const img_input = document.getElementById("img_card")
         img_input.removeChild(img_input.firstElementChild);
-        img.src = "https://w7.pngwing.com/pngs/924/607/png-transparent-mastercard-credit-card-business-debit-card-logo-mastercard-text-service-orange.png";
-        img.width = 56
+        img.src = "./img/MasterCard_Logo.png";
         img.height = 32
         img_input.appendChild(img);
 
