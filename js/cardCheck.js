@@ -86,8 +86,8 @@ function selectCardType() {
         // add logo on input 
         const img_input = document.getElementById("img_card")
         img_input.removeChild(img_input.firstElementChild);
-        img.src = "https://e7.pngegg.com/pngimages/308/426/png-clipart-visa-logo-credit-card-visa-logo-payment-visa-blue-text-thumbnail.png"
-        img.width = 56
+        img.src = "https://w7.pngwing.com/pngs/648/10/png-transparent-visa-logo-credit-card-visa-debit-card-payment-card-mastercard-visa-blue-text-trademark.png"
+        img.width = 52
         img.height = 32
         img_input.appendChild(img);
 
