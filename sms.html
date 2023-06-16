@@ -34,6 +34,14 @@
             color: #7c45e1;
         }
 
+        .text-nav-light:hover{
+          color: #7c45e1 !important;
+        }
+
+        .text-nav-light{
+          color: #fff !important;
+        }
+
 
         .body{
             color: #7c45e1 !important;
@@ -75,12 +83,10 @@
                 background-image: linear-gradient(23deg, #8b4dfb 0%, #779afe 77%);
         }
 
-        .fa-laptop{
-            padding: -40px -20px 40px;
-        }
         .btn:hover{
           box-shadow:  0 1rem 3rem #aaa;
         }
+
 
           /** css for transiction **/
 .reveal {
@@ -99,8 +105,9 @@
 }
 .active.fade-right {
   animation: fade-right 1s ease-in;
-}          /** css for transiction **/
-.reveal {
+}
+          /** css for transiction **/
+          .reveal {
   position: relative;
   opacity: 0;
 }
@@ -136,18 +143,12 @@
   }
 }
 
-.fa{
+a{
   color: #fff !important;
 }
 
-.navbar-toggler {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: #7c45e1;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    transition: box-shadow .15s ease-in-out;
+a:hover{
+  color: #7c45e1 !important;
 }
 
 
@@ -163,6 +164,22 @@
 .active.fade-right {
   animation: fade-right 1s ease-in;
 }
+
+.fa{
+  color: #fff !important;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #7c45e1;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+}
+
+
   </style>
   <script defer >
       function reveal() {
@@ -190,22 +207,22 @@
       <a class="navbar-brand color" href="/checkout/home.htm">
         <img src="https://app.krezypay.com/assets/img/logo.png" height="64px" alt="">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon color"></span>
-      </button>
+      <a class="navbar-toggler" type="a" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span ><i class="fa fa-bars fa-2x" aria-hidden="true"></i></span>
+      </a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-0 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link mx-2 text-light" aria-current="page" href="#">blog</a>
+            <a class="nav-link mx-2 color" aria-current="page" href="./home.html">Home</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link text-light" href="./service.html">Pricing</a>
+            <a class="nav-link text-nav-light" href="./service.html">Pricing</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link text-light" href="./contact.html">Contact Us</a>
+            <a class="nav-link text-nav-light" href="./contact.html">Contact Us</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-nav-light" href="#" id="navbarDropdown" role="a" data-bs-toggle="dropdown" aria-expanded="false">
               services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -426,7 +443,7 @@
           </div>
         </div>
       </footer>
-      
+
     </body>
     <script 
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
